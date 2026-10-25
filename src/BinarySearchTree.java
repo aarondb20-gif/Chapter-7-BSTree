@@ -1,6 +1,10 @@
 public class BinarySearchTree<T extends Comparable<T>> {
     protected BSTNode<T> root;
 
+    public BinarySearchTree(){
+        root = null;
+    }
+
     public void add(T element){
         root = recAdd(element,root);
     }
@@ -15,5 +19,16 @@ public class BinarySearchTree<T extends Comparable<T>> {
             node.setRight(recAdd(element, node.getRight()));
         }
         return node;
+    }
+
+    public int height(){
+        return recHeight(root);
+    }
+    private int recHeight(BSTNode<T> node) {
+        if (node == null) {
+            return -1;
+        } else {
+            return 1 + Math.max(recHeight(node.getLeft()), recHeight(node.getRight()));
+        }
     }
 }

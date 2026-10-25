@@ -1,3 +1,5 @@
+import java.net.StandardSocketOptions;
+
 public class Main {
     public static void main(String[] args) {
         BinarySearchTree<Integer> archive = new BinarySearchTree<>();
@@ -5,7 +7,8 @@ public class Main {
         for (int id : sampleIds){
             archive.add(id);
         }
-        System.out.println("Archive initialized with Sample IDs.");
+
+        System.out.println(archive.height());
 
     }
 }
