@@ -15,3 +15,9 @@ together that are not null.
 Phase 3
 I coded algorithms to recursively traverse the tree Inorder and in Preorder and print them out. The Inorder algorithm
 formula matches the structural rules of the binary search tree causing it to traverse the nodes in the correct order.
+
+Phase 4 
+When I made the skewed, each node went down to the right node and made an unbalanced tree. The preorder and inorder 
+traversal for it was the same and printed the numbers out in sequential order. One edge case I noticed is that you can 
+put the same integer into the array twice, and it will print it out twice in the tree, but the algorithm should disregard
+any redundant numbers. I may be able to add a check for that in the add method.
