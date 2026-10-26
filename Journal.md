@@ -11,3 +11,7 @@ Phase 2
 I created a recursive method to calculate the height of the tree. The algorithm will check the root node, then it's left
 node, then it's right node, and repeat those steps recursively until it gets to a node that is null and add the nodes 
 together that are not null.
+
+Phase 3
+I coded algorithms to recursively traverse the tree Inorder and in Preorder and print them out. The Inorder algorithm
+formula matches the structural rules of the binary search tree causing it to traverse the nodes in the correct order.

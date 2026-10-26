@@ -7,8 +7,13 @@ public class Main {
         for (int id : sampleIds){
             archive.add(id);
         }
+        //Tree height
+        //System.out.println(archive.height());
+        //Inorder
+        System.out.println(archive.inOrderTraversal());
+        //Preorder
+        System.out.println(archive.preOrderTraversal());
 
-        System.out.println(archive.height());
 
     }
 }
