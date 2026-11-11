@@ -1,10 +1,23 @@
+import org.w3c.dom.Node;
+
 public class BinarySearchTree<T extends Comparable<T>> {
     protected BSTNode<T> root;
 
     public BinarySearchTree() {
         root = null;
+
     }
 
+
+    static class Node {
+        int data;
+        Node left, right;
+
+        public Node(int item) {
+            data = item;
+            left = right = null;
+        }
+    }
 
     public void add(T element) {
         root = recAdd(element, root);
@@ -57,6 +70,20 @@ public class BinarySearchTree<T extends Comparable<T>> {
         recInOrder(current.getLeft());
         System.out.println(current.getInfo());
         recInOrder(current.getRight());
+    }
+
+    // Iterative Min Finder
+    private T findMinHelper(BSTNode<T> current){
+        while (current.getLeft() != null) {
+            current = current.getLeft();
+        }
+        return current.getInfo();
+    }
+    public T findmin(){
+        if(root == null){
+            return null;
+        }
+        return findMinHelper(root);
     }
 
 
